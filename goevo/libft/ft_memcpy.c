@@ -6,7 +6,7 @@
 /*   By: iyildiz <yildiz.ie58@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:12:35 by iyildiz           #+#    #+#             */
-/*   Updated: 2023/07/29 23:34:22 by matrix           ###   ########.tr       */
+/*   Updated: 2023/08/01 14:56:41 by iyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t		i;
-	const char	*p;
+	char		*p;
 	char		*str;
 
 	i = 0;
-	str = dst;
-	p = src;
+	str = (char *)dst;
+	p = (char *)src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	while (n > i)
 	{
 		str[i] = p[i];

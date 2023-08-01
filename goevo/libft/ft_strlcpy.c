@@ -6,7 +6,7 @@
 /*   By: iyildiz <yildiz.ie58@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:02:55 by iyildiz           #+#    #+#             */
-/*   Updated: 2023/07/30 00:35:38 by matrix           ###   ########.tr       */
+/*   Updated: 2023/08/01 15:22:26 by iyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 
-	src_len = 0;
-	if (dst == NULL || src == NULL)
+	src_len = ft_strlen(src);
+	if (src == NULL)
 		return (0);
-	while (src[src_len] != '\0')
-		src_len++;
 	i = 0;
 	if (dstsize != 0)
 	{

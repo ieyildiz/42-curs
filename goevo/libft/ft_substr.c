@@ -6,7 +6,7 @@
 /*   By: iyildiz <yildiz.ie58@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:11:33 by iyildiz           #+#    #+#             */
-/*   Updated: 2023/07/31 07:42:18 by matrix           ###   ########.tr       */
+/*   Updated: 2023/08/01 15:44:02 by iyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	new_str = (char *)malloc(len + 1);
 	if (!s || !(new_str))
 		return (0);
