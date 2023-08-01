@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trimmed;
+	char	*kesilen;
 	size_t	start;
 	size_t	end;
 
@@ -28,6 +28,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		++start;
 	while (s1[end] && ft_strchr(set, s1[end]))
 		--end;
-	trimmed = ft_substr(s1, start, end - start + 1);
-	return (trimmed);
+	kesilen = ft_substr(s1, start, end - start + 1);
+	return (kesilen);
 }

@@ -2,9 +2,10 @@
 
 int main()
 {
-    char *src = "123456789";
-    char *dst = "123456789";
-    
-    ft_memmove(dst, src, 6);
-    printf("%s", dst);
+	char	src[] = "lorem ipsum dolor sit amet";
+	char	*dest;
+
+	dest = src + 1;
+	ft_memmove(dest, "consectetur", 5);
+	printf("%s", dest);
 }
